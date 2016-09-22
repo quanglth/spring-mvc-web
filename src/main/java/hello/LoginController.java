@@ -41,7 +41,7 @@ public class LoginController {
             @RequestParam(value = "psw", required = true) String password,
             Model model) {
         if(userName.equals("mot") && password.equals("123")) {
-            return "redirect:/greeting";
+            return "redirect:/greeting?name=" + userName;
         } else {
             return "login-fail";
         }
